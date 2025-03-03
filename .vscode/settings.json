@@ -1,5 +1,5 @@
 {       
-        "python.defaultInterpreterPath":"C:\\Users\\fbenichou\\python_environments\\agent_assignment\\Scripts\\python.exe",
+        "python.defaultInterpreterPath":"C:\\Users\\fbenichou\\python_environments\\agent_env\\Scripts\\python.exe",
         "python.terminal.activateEnvironment": true,
         "pythonIndent.trimLinesWithOnlyWhitespace": false,
         "pythonIndent.useTabOnHangingIndent": false,

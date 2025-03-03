@@ -1,14 +1,22 @@
 import os
 from dotenv import load_dotenv
+import time
 
 from langchain_openai import AzureChatOpenAI
+from langchain_openai import AzureOpenAI
 
 load_dotenv(dotenv_path=".env")
 
-# load_dotenv(dotenv_path="Deloitte.Ca.DBotBeta.DjangoAPI\\DVoice\\.env") 
 
 def instantiate_azure_chat_openai():
     """
+    Instantiate and return an AzureChatOpenAI model using environment variables for configuration.
+
+    The function retrieves required parameters such as API version, temperature, deployment name,
+    endpoint, API key, maximum token limit, and model name from environment variables.
+    
+    Returns:
+        AzureChatOpenAI: An instance of AzureChatOpenAI configured with the specified parameters.
     """
     
     model = AzureChatOpenAI(
