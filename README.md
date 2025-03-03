@@ -1,1 +1,0 @@
-# manulife_assignment
