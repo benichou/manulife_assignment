@@ -20,7 +20,7 @@ def instantiate_azure_chat_openai():
     """
     
     model = AzureChatOpenAI(
-            openai_api_version = os.environ["AZURE_OPENAI_API_VERSION"],
+            openai_api_version = os.environ["AZURE_OPENAI_API_VERSION"], ## make sure to have your own .env or token to run the solution
             temperature        = os.environ["TEMPERATURE"],
             deployment_name    = os.environ["AZURE_OPENAI_MODEL_NAME"],
             azure_endpoint     = os.environ["AZURE_OPENAI_ENDPOINT"],

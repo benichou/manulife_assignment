@@ -1,8 +1,7 @@
 ## Agentic Q&A Framework
 
 ### Context
-We are trying to resolve the issue of answering different types of questions with the correct tools. In our case, we built
-a quick production-ready agent that can answer the following types of questions:
+We are trying to resolve the issue of answering different types of questions with the correct tools. In our case, we built a quick production-ready agent that can answer the following types of questions:
 1. General Web Search (we use DuckDuckGo)
 2. Code Generation
 3. General LLM questions
@@ -10,6 +9,14 @@ a quick production-ready agent that can answer the following types of questions:
 The framework we use is Langraph for the agentic framework, with Langchain for chaining and AzureChatOpenAI as the main LLM.
 
 Follow the `requirements.txt` solution to make sure it works.
+
+### Prerequisites: Azure OpenAI GPT-4o with JSON Mode Support
+To run this solution, you must have access to an **Azure OpenAI** instance with the following specifications:
+- **Model**: `gpt-4o` (or equivalent with JSON structured output support)
+- **API Version**: `2024-08-01-preview` or later (this is required for structured JSON output)
+- **Deployment**: Ensure that your Azure OpenAI instance is properly configured and that your API key, endpoint, and deployment name are set in the environment variables.
+
+Without these requirements, the structured outputs necessary for query classification and responses will not work correctly.
 
 ## Installation
 1. Python version >= 3.11
@@ -48,4 +55,3 @@ To enable the agent to conditionally route questions to the appropriate tool, we
 4. **Conversation Loop**: The framework maintains a conversation loop where after answering, it prompts the user for further input, ensuring seamless interaction.
 
 This approach ensures that the agent dynamically selects the appropriate tool for each query while maintaining context for improved responses.
-
