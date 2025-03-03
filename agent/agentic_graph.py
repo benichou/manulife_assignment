@@ -8,7 +8,6 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.memory import MemorySaver
 from operator import add
 
-from utilities.models import instantiate_azure_chat_openai
 from tools.list_of_tools import search_duckduckgo, search_wikipedia
 from tools.generate_answer import generate_answer
 
